@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <Menu />
       <main className={utilityStyles['main-container']}>
-        <Section title='About Me' inverted={true}>
+        <Section title='About Me' inverted={false}>
           <div>
             <Image 
               src='/images/pixel-pc.png' 
@@ -39,7 +39,7 @@ export default function Home() {
             development.
           </p>
         </Section>
-        <Section title='Projects'>
+        <Section title='Projects' inverted={true}>
           <p className={sectionStyles['section-text']}>
           Here are some samples of my work. More can be found on my Github profile.
             </p>
