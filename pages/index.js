@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Section from '../components/section'
+import Menu from '../components/menu'
 import utilityStyles from '../styles/Utilities.module.css'
 import sectionStyles from '../components/section.module.css'
 
@@ -12,6 +13,7 @@ export default function Home() {
         <meta name='description' content='Personal Portfolio' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <Menu />
       <main className={utilityStyles['main-container']}>
         <Section title='About Me' inverted={true}>
           <div>
@@ -24,7 +26,7 @@ export default function Home() {
             />
           </div>
           <p className={sectionStyles['section-text']}>
-            I am a software developer based in Winnipeg. I studied Computer Science
+            My name is Aaron Noyes. I am a software developer based in Winnipeg. I studied Computer Science
             at the University of Manitoba, specializing in Networks & Security, and
             Artificial Intelligence. In my free time, I enjoy writing software and
             learning about current software security trends.
