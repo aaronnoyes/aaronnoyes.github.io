@@ -22,6 +22,11 @@ export async function getStaticPaths() {
 export default function Post({ postData }) {
     return (
       <div>
+        <Head>
+            <title>Aaron Noyes</title>
+            <meta name='description' content='Personal Portfolio' />
+            <link rel='icon' href='/favicon.ico' />
+        </Head>
         {postData.title}
         <br />
         {postData.id}
