@@ -28,14 +28,14 @@ export default function Home({allPostsData}) {
       <main className={utilityStyles['main-container']}>
         <Section title='Blog'>
           <div>
-            <ul>
-              {allPostsData.map(({ id, date, title }) => (
+            <ul className={utilityStyles['list-no-bullets']}>
+              {allPostsData.map(({ id, description, title, date }) => (
                 <li key={id}>
-                  <Link href={`/posts/${id}`}>{title}</Link>
+                  <Link href={`/posts/${id}`} className={`${utilityStyles.link} ${sectionStyles['section-text']}`}>{title}</Link>
                   <br />
-                  {id}
+                  {description}
                   <br />
-                  {date}
+                  <span className={utilityStyles['small-italic']}>{date}</span>
                 </li>
               ))}
             </ul>

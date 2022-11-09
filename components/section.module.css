@@ -20,6 +20,24 @@
 .section-content > * {
     width: 10000px;
 }
+
+.section-content img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.section-content a {
+  color: #6982e1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-content a:visited {
+  color: #6982e1;
+  font-weight: bold;
+  text-decoration: none;
+}
   
 .section-container {
     width: 100%;

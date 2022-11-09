@@ -1,4 +1,9 @@
+import Head from 'next/head'
+import Section from '../../components/section'
+import Menu from '../../components/menu'
 import { getAllPostIds, getPostData } from '../../lib/posts'
+import utilityStyles from '../../styles/Utilities.module.css'
+import sectionStyles from '../../components/section.module.css'
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id);
@@ -27,12 +32,15 @@ export default function Post({ postData }) {
             <meta name='description' content='Personal Portfolio' />
             <link rel='icon' href='/favicon.ico' />
         </Head>
-        {postData.title}
-        <br />
-        {postData.id}
-        <br />
-        {postData.date}
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <Menu />
+        <main className={utilityStyles['main-container']}>
+            <Section title={postData.title}>
+                <div 
+                    className={sectionStyles['section-text']}
+                    dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
+                />
+            </Section>
+      </main>
       </div>
     );
   }

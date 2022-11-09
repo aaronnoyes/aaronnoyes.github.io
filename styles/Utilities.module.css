@@ -14,3 +14,17 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+.list-no-bullets {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.list-no-bullets a {
+  padding: 0px;
+}
+
+.small-italic {
+  font-size: 12px;
+  font-style: italic;
+}
