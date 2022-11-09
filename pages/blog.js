@@ -28,17 +28,17 @@ export default function Home({allPostsData}) {
       <main className={utilityStyles['main-container']}>
         <Section title='Blog'>
           <div>
-          <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
+            <ul>
+              {allPostsData.map(({ id, date, title }) => (
+                <li key={id}>
+                  <Link href={`/posts/${id}`}>{title}</Link>
+                  <br />
+                  {id}
+                  <br />
+                  {date}
+                </li>
+              ))}
+            </ul>
           </div>
         </Section>
       </main>
